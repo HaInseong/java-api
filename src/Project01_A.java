@@ -1,6 +1,7 @@
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken; // reflect = 역추적해서 데이터를 만들어내는데 주로 쓰임.
 import kr.inflearn.BookDTO;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,12 @@ public class Project01_A {
         Gson g = new Gson();
         String json = g.toJson(dto); // 직렬화: dto 클래스 안에 있는 멤버변수 이름이 자동으로 key값이 된다.
         System.out.println(json); // {"title":"자바","price":20000,"company":"에이콘","page":500}
+//        JSONObject student = new JSONObject(); // 객체 생성
+//        student.put("name", "고길동"); // 객체 필드 초기화
+//        student.put("phone", "010-0020-0402");
+//        student.put("address", "강남");
+//        students.put(student); // 객체 배열에 객체 할당 = 0번 인덱스
+
 
         // JSON(String)을 -> Object(BookDTO)으로 바꾸기
         BookDTO dto1 = g.fromJson(json, BookDTO.class); // 역직렬화: 들어온 json 정보 기반으로 자동으로 객체가 생성된다.

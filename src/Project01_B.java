@@ -16,29 +16,31 @@ public class Project01_B {
         student.put("name", "고길동"); // 객체 필드 초기화
         student.put("phone", "010-0020-0402");
         student.put("address", "강남");
-        students.put(student); // 객체 배열에 객체 할당
+        students.put(student); // 객체 배열에 객체 할당 = 0번 인덱스
 
-        student = new JSONObject();
+        student = new JSONObject(); // 메모리 낭비하지 않고 student 그대로 활용
         student.put("name", "둘리");
         student.put("phone", "010-1122-1232");
         student.put("address", "판교");
-        students.put(student);
+        students.put(student); // 객체 배열에 객체 할당 = 1번 인덱스
 
         student = new JSONObject();
         student.put("name", "도우너");
         student.put("phone", "010-3332-4456");
         student.put("address", "일산");
-        students.put(student);
+        students.put(student); // 객체 배열에 객체 할당 = 2번 인덱스
 
         student = new JSONObject();
         student.put("name", "또치");
         student.put("phone", "010-8884-1961");
         student.put("address", "왕십리");
-        students.put(student);
+        students.put(student); // 객체 배열에 객체 할당 = 3번 인덱스
         System.out.println(students.toString(1));
 
         JSONObject object = new JSONObject(); // 객체배열을 담을 객체 생성 => 한번 더 담는 이유가 뭐야?
-        object.put("students", students);
+        object.put("students", students); // object 참조변수 안에 students: students라는 키와 밸류 할당
+        System.out.println(students);
+        System.out.println(object);
         System.out.println(object.toString(2));
     }
 }
