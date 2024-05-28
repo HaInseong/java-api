@@ -8,6 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
+// 게시글 리스트 JSONArray, 게시글 내용 JSONObject
 public class Project01_D {
     public static void main(String[] args) {
         BufferedReader io = new BufferedReader(new InputStreamReader(System.in));
